@@ -17,7 +17,9 @@ The development server will be available on `http://localhost:8080`.
 ## Building the project
 
 Build your project using either:
-- Generate JavaScript via: `jaspr build -O4`
-- Generate WebAssembly via: `jaspr build --experimental-wasm -O4`
+- Generate JavaScript via: `jaspr build -O4 --extra-js-compiler-option=--no-minify`
+- Generate WebAssembly via: `jaspr build -O4 --experimental-wasm --extra-wasm-compiler-option=--no-strip-wasm`
+
+NOTE: The `--extra-{js,wasm}-compiler-option` are available with: https://github.com/schultek/jaspr/pull/397
 
 The output will be located inside the `build/jaspr/` directory.
