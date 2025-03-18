@@ -94,7 +94,7 @@ class TodoMVCState extends State<TodoMVC> {
                       classes: 'toggle-all',
                       id: 'toggle-all',
                       type: InputType.checkbox,
-                      attributes: activeCount > 0 ? {} : {'checked': ''},
+                      attributes: activeCount > 0 ? null : {'checked': ''},
                       onChange: (_) => toggleAll(),
                       []),
                   label(classes: 'toggle-all-label', attributes: {
@@ -115,7 +115,7 @@ class TodoMVCState extends State<TodoMVC> {
                               classes: 'toggle',
                               key: Key('$dataId-$isActive'),
                               type: InputType.checkbox,
-                              attributes: isActive ? {} : {'checked': ''},
+                              attributes: isActive ? null : {'checked': ''},
                               onChange: (_) => toggle(dataId),
                               []),
                           label([text(todo)]),
